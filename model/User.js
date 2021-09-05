@@ -11,7 +11,11 @@ const userSchema = new mongoose.Schema(
       type:String,
       unique:true
     },
-    viewContactPermission: Boolean
+    location: String,
+    viewContactPermission: {
+      type: Boolean,
+      default: false
+    }
 }
 );
 module.exports = mongoose.model('user', userSchema);
